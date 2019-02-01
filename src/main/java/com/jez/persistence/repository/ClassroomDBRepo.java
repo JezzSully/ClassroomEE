@@ -15,17 +15,17 @@ import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 @Transactional(SUPPORTS)
 @Default
-public class ClassroomDBRepo implements ClassroomRepository{
+public class ClassroomDBRepo implements ClassroomRepository {
 
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
-	
+
 	@Inject
 	private JSONUtil jsonUtil;
-	
+
 	private String successMessage = "{\"message\": \"Success\"}";
 	private String failureMessage = "{\"message\": \"Failure\"}";
-	
+
 	public String getAllClassrooms() {
 		TypedQuery<Classroom> query = manager.createQuery("SELECT c from Classroom c", Classroom.class);
 		return jsonUtil.getJSONForObject(query.getResultList());
@@ -41,17 +41,17 @@ public class ClassroomDBRepo implements ClassroomRepository{
 	@Transactional(REQUIRED)
 	public String deleteClassroom(Long id) {
 		Classroom myClassroom = manager.find(Classroom.class, id);
-		if(myClassroom != null) {
+		if (myClassroom != null) {
 			manager.remove(myClassroom);
 			return this.successMessage;
 		} else {
 			return this.failureMessage;
 		}
 	}
-	
+
 	@Transactional(REQUIRED)
 	public String updateClassroom(long id, String classroom) {
-		if(deleteClassroom(id).equals(this.successMessage)) {
+		if (deleteClassroom(id).equals(this.successMessage)) {
 			createClassroom(classroom);
 			return this.successMessage;
 		} else {

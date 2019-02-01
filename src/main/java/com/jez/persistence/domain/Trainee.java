@@ -1,29 +1,27 @@
 package com.jez.persistence.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Trainee {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="TRAINEEID")
+	@Column(name = "TRAINEEID")
 	private long traineeID;
-	
+
 	private String traineeName;
-	
-	@ManyToOne
-	@JoinColumn(name="CLASSROOMID")
-	private Classroom classroom;
-	
+
 	public Trainee() {
-		
+
 	}
-	
+
 	public Trainee(String traineeName) {
 		this.traineeName = traineeName;
 	}
@@ -42,13 +40,5 @@ public class Trainee {
 
 	public void setTraineeName(String traineeName) {
 		this.traineeName = traineeName;
-	}
-
-	public Classroom getClassroom() {
-		return classroom;
-	}
-
-	public void setClassroom(Classroom classroom) {
-		this.classroom = classroom;
 	}
 }

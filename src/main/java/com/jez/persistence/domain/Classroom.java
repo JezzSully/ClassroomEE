@@ -4,23 +4,34 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class Classroom {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="CLASSROOMID")
+	@Column(name = "CLASSROOMID")
 	private long classroomID;
-	
+
 	private String trainer;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "classroom", fetch = FetchType.EAGER)
+
+	@OneToMany(targetEntity = com.jez.persistence.domain.Trainee.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Trainee> trainees;
+
+	public Classroom() {
+
+	}
+
+	public Classroom(String trainer, List<Trainee> trainees) {
+		this.trainer = trainer;
+		this.trainees = trainees;
+	}
 
 	public long getClassroomID() {
 		return classroomID;

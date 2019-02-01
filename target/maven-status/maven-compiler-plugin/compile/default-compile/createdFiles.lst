@@ -1,0 +1,10 @@
+com\jez\rest\JAXActivator.class
+com\jez\persistence\domain\Classroom.class
+com\jez\business\ClassroomBusiness.class
+com\jez\util\JSONUtil.class
+com\jez\business\BusinessInterface.class
+com\jez\persistence\repository\ClassroomDBRepo.class
+com\jez\ClassroomEE\App.class
+com\jez\persistence\repository\ClassroomRepository.class
+com\jez\persistence\domain\Trainee.class
+com\jez\rest\ClassroomEndpoints.class

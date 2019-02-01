@@ -3,7 +3,7 @@ package com.jez.util;
 import com.google.gson.Gson;
 
 public class JSONUtil {
-	
+
 	private Gson gson;
 
 	public JSONUtil() {
@@ -11,10 +11,7 @@ public class JSONUtil {
 	}
 
 	public String getJSONForObject(Object obj) {
-		
-//		Jsonb jsonb = JsonbBuilder.create();
-//		String result = jsonb.toJson(dog);
-		
+
 		return gson.toJson(obj);
 	}
 

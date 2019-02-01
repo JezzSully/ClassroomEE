@@ -5,14 +5,14 @@ import javax.inject.Inject;
 import com.jez.persistence.repository.ClassroomRepository;
 import com.jez.util.JSONUtil;
 
-public class ClassroomBusiness implements BusinessInterface{
+public class ClassroomBusiness implements BusinessInterface {
 
 	@Inject
 	private ClassroomRepository myRepo;
-	
+
 	@Inject
 	private JSONUtil jsonUtil;
-	
+
 	public String getAllClassrooms() {
 		return myRepo.getAllClassrooms();
 	}
