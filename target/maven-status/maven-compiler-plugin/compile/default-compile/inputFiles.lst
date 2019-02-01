@@ -5,6 +5,7 @@ C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\rest\Classroo
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\rest\JAXActivator.java
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\persistence\domain\Classroom.java
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\persistence\repository\ClassroomDBRepo.java
+C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\persistence\repository\ClassroomMapRepo.java
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\persistence\domain\Trainee.java
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\persistence\repository\ClassroomRepository.java
 C:\Users\Admin\eclipse-workspace\ClassroomEE\src\main\java\com\jez\business\ClassroomBusiness.java

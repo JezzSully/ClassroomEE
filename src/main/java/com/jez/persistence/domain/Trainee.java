@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 public class Trainee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "TRAINEEID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long traineeID;
 
 	private String traineeName;

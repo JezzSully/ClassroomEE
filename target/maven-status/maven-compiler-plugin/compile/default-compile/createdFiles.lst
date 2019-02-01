@@ -8,3 +8,4 @@ com\jez\ClassroomEE\App.class
 com\jez\persistence\repository\ClassroomRepository.class
 com\jez\persistence\domain\Trainee.class
 com\jez\rest\ClassroomEndpoints.class
+com\jez\persistence\repository\ClassroomMapRepo.class

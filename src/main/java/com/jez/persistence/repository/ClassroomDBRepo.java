@@ -23,8 +23,8 @@ public class ClassroomDBRepo implements ClassroomRepository {
 	@Inject
 	private JSONUtil jsonUtil;
 
-	private String successMessage = "{\"message\": \"Success\"}";
-	private String failureMessage = "{\"message\": \"Failure\"}";
+	private String successMessage = "{\"message\":\"Success\"}";
+	private String failureMessage = "{\"message\":\"Failure\"}";
 
 	public String getAllClassrooms() {
 		TypedQuery<Classroom> query = manager.createQuery("SELECT c from Classroom c", Classroom.class);
